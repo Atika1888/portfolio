@@ -1,20 +1,37 @@
 body {
     font-family: Arial;
     margin: 0;
-    padding: 0;
 }
 
-header {
-    background-color: #333;
+/* Navbar */
+nav {
+    background-color: #222;
+    padding: 10px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
     color: white;
+    text-decoration: none;
+}
+
+/* Header */
+header {
     text-align: center;
-    padding: 20px;
+    padding: 50px;
+    background: #f4f4f4;
 }
 
+/* Sections */
 section {
-    padding: 20px;
-}
-
-h2 {
-    color: #333;
+    padding: 40px;
 }
