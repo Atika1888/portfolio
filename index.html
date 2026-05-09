@@ -1,41 +1,115 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>My Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atika Khalid | Portfolio</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-<nav>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="skills.html">Skills</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
-    <header>
-        <img src="blah.jpeg" width="150" height="400">
-    <h1>Hi, I'm Atika 👋</h1>
-    <p>Aspiring Data Analyst</p>
-</header>
-   <section id="about">
-    <h2>About Me</h2>
-    <p>
-        I am Atika Khalid, a Computer Science student in my 7th semester at the University of Lahore. 
-        I am passionate about data analysis, problem solving, and turning raw data into meaningful insights.
-    </p>
+<body class="home-page">
 
-    <p>
-        I have hands-on experience in Python, statistics, and data visualization tools, and I am continuously 
-        improving my skills in software development and analytical thinking.
-    </p>
+    <!-- BACKGROUND ICONS -->
+    <div class="bg-icons">
 
-    <p>
-        My goal is to become a professional data analyst where I can apply my technical and analytical skills 
-        to solve real-world problems.
-    </p>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="icon i1">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" class="icon i2">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="icon i3">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="icon i4">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="icon i5">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="icon i6">
 
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">Atika Khalid</div>
+
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="home">
+
+        <div class="image-container">
+
+            <div class="side-name left-name">ATIKA</div>
+
+            <img src="pic.jpeg" class="profile-pic">
+
+            <div class="side-name right-name">KHALID</div>
+
+        </div>
+
+        <!-- ROLE -->
+        <div class="overlay-role">
+            <span id="role-text"></span>
+        </div>
+
+        <!-- TEXT -->
+        <h1 class="main-heading">Computer Science Student</h1>
+
+        <p class="hero-description">
+            Passionate about Frontend Development, Data Analytics,
+            Python Programming, and building modern digital experiences.
+        </p>
+
+        <!-- BUTTONS -->
+        <div class="hero-buttons">
+
+            <a href="projects.html" class="btn primary-btn">View Projects</a>
+
+            <a href="contact.html" class="btn secondary-btn">Contact Me</a>
+
+        </div>
+
+    </section>
+
+    <!-- TYPING EFFECT -->
+    <script>
+        const roles = [
+            "Frontend Developer",
+            "Data Analyst",
+            "Problem Solver"
+        ];
+
+        let i = 0;
+        let j = 0;
+        let isDeleting = false;
+
+        function typeEffect() {
+            let current = roles[i];
+
+            document.getElementById("role-text").innerHTML =
+                current.substring(0, j);
+
+            if (!isDeleting) j++;
+            else j--;
+
+            if (j === current.length + 1) {
+                isDeleting = true;
+                setTimeout(typeEffect, 1000);
+                return;
+            }
+
+            if (j === 0) {
+                isDeleting = false;
+                i = (i + 1) % roles.length;
+            }
+
+            setTimeout(typeEffect, isDeleting ? 70 : 120);
+        }
+
+        typeEffect();
+    </script>
 
 </body>
-</html>
+
+</html> 
