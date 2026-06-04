@@ -28,15 +28,15 @@
         <div class="logo">Atika Khalid</div>
 
         <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="skills.html">Skills</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#hero" class="nav-link active">Home</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- HERO -->
-    <section class="home">
+    <!-- HERO SECTION -->
+    <section id="hero" class="home">
 
         <div class="image-container">
 
@@ -64,20 +64,151 @@
         <!-- BUTTONS -->
         <div class="hero-buttons">
 
-            <a href="projects.html" class="btn primary-btn">View Projects</a>
+            <a href="#projects" class="btn primary-btn">View Projects</a>
 
-            <a href="contact.html" class="btn secondary-btn">Contact Me</a>
+            <a href="#contact" class="btn secondary-btn">Contact Me</a>
 
         </div>
 
     </section>
 
-    <!-- TYPING EFFECT -->
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="page skills-section">
+
+        <h1 class="main-heading">My Skills</h1>
+
+        <div class="grid">
+
+            <div class="project-card">
+                HTML5
+            </div>
+
+            <div class="project-card">
+                CSS3
+            </div>
+
+            <div class="project-card">
+                JavaScript
+            </div>
+
+            <div class="project-card">
+                React.js
+            </div>
+
+            <div class="project-card">
+                TypeScript
+            </div>
+
+            <div class="project-card">
+                Python
+            </div>
+
+            <div class="project-card">
+                FastAPI
+            </div>
+
+            <div class="project-card">
+                Data Analysis
+            </div>
+
+            <div class="project-card">
+                SQL
+            </div>
+
+            <div class="project-card">
+                Firebase
+            </div>
+
+            <div class="project-card">
+                MongoDB
+            </div>
+
+            <div class="project-card">
+                Git & GitHub
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="page projects-section">
+
+        <h1 class="main-heading">My Projects</h1>
+
+        <div class="grid">
+
+            <a href="netflix.html" class="project-card">
+                🎬 Netflix Clone
+            </a>
+
+            <a href="fyp.html" class="project-card">
+                🤖 AI WhatsApp Chatbot (FYP)
+            </a>
+
+            <a href="database.html" class="project-card">
+                📊 Data Analytics Project
+            </a>
+
+            <a href="portfolo.html" class="project-card">
+                🌐 Portfolio Website
+            </a>
+
+            <a href="manisy.html" class="project-card">
+                🛍️ Manisy Web Store
+            </a>
+
+            <a href="dashboard.html" class="project-card">
+                📊 UI Dashboard (Frontend Project)
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="page contact-page">
+
+        <h1 class="main-heading">Get In Touch</h1>
+
+        <p class="hero-description">
+            Feel free to contact me for collaborations, projects or opportunities.
+        </p>
+
+        <div class="grid">
+
+            <!-- EMAIL -->
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=atikakhalid441@gmail.com" target="_blank" class="project-card">
+                📧 Email Me
+            </a>
+
+            <!-- LINKEDIN -->
+            <a href="https://www.linkedin.com/in/atika-khalid-a58594318" target="_blank" class="project-card">
+                💼 LinkedIn
+            </a>
+
+            <!-- GITHUB -->
+            <a href="https://github.com/Atika1888" target="_blank" class="project-card">
+                💻 GitHub
+            </a>
+
+            <!-- BACK TO TOP -->
+            <a href="#hero" class="project-card">
+                ⬆ Back to Top
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- TYPING EFFECT & NAVIGATION SCRIPT -->
     <script>
+        // Typing Effect
         const roles = [
             "Frontend Developer",
             "Data Analyst",
-            "Problem Solver"
+            "Problem Solver",
+            "AI Enthusiast"
         ];
 
         let i = 0;
@@ -108,8 +239,49 @@
         }
 
         typeEffect();
+
+        // Smooth Scrolling & Active Nav Link
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('section');
+
+        // Smooth scroll on nav click
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Update active nav link on scroll
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Allow scrolling on home page (override original CSS)
+        document.body.style.overflow = 'auto';
     </script>
 
 </body>
 
-</html> 
+</html>
