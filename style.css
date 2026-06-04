@@ -962,3 +962,46 @@ body.home-page {
         font-size: 13px;
     }
 }
+/* Force the exact laptop alignment, spacing, and layout scaling on mobile viewports */
+
+.navbar {
+    display: flex !important;
+    flex-direction: row !important; /* Prevents nav links from stacking vertically on mobile */
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 15px 30px !important; /* Keeps identical padding as laptop */
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.navbar ul {
+    display: flex !important;
+    flex-direction: row !important; /* Keeps links horizontal on mobile screens */
+    gap: 20px !important; /* Retains desktop gap styling */
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+}
+
+.page {
+    padding: 40px 20px !important; /* Matches desktop page containers */
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    min-height: calc(100vh - 80px) !important;
+}
+
+.detail-card {
+    width: 100% !important;
+    max-width: 800px !important; /* Keeps text layout inside the unified clean card structure */
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+    text-align: left !important; /* Preserves laptop text alignment */
+}
+
+/* Fix for Grid Layouts (like the contact page grid links) */
+.grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important; /* Keeps multi-column horizontal cards intact if screen room permits */
+    gap: 20px !important;
+}
