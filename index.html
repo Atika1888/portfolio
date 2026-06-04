@@ -64,9 +64,9 @@
         <!-- BUTTONS -->
         <div class="hero-buttons">
 
-            <a href="#projects" class="btn primary-btn scroll-link">View Projects</a>
+            <a href="#projects" class="btn primary-btn">View Projects</a>
 
-            <a href="#contact" class="btn secondary-btn scroll-link">Contact Me</a>
+            <a href="#contact" class="btn secondary-btn">Contact Me</a>
 
         </div>
 
@@ -193,7 +193,7 @@
             </a>
 
             <!-- BACK TO TOP -->
-            <a href="#hero" class="project-card scroll-link">
+            <a href="#hero" class="project-card">
                 ⬆ Back to Top
             </a>
 
@@ -240,22 +240,16 @@
 
         typeEffect();
 
-        // Smooth Scrolling for all internal links
-        const scrollLinks = document.querySelectorAll('a[href^="#"]');
-        
-        scrollLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
-                const href = this.getAttribute('href');
-                
-                // Only prevent default and smooth scroll for anchor links
-                if (href.startsWith('#')) {
-                    e.preventDefault();
-                    const targetId = href.substring(1);
-                    const targetSection = document.getElementById(targetId);
-                    
-                    if (targetSection) {
-                        targetSection.scrollIntoView({ behavior: 'smooth' });
-                    }
+        // Smooth Scroll for all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
                 }
             });
         });
@@ -283,9 +277,6 @@
                 }
             });
         });
-
-        // Allow scrolling on home page
-        document.body.style.overflow = 'auto';
     </script>
 
 </body>
