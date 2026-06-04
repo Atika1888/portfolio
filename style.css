@@ -19,6 +19,7 @@ body {
     color: white;
 
     overflow-x: hidden;
+    overflow-y: auto;
 }
 
 
@@ -77,6 +78,8 @@ body {
     position: relative;
 
     transition: 0.3s;
+    
+    cursor: pointer;
 }
 
 .navbar ul li a:hover,
@@ -111,7 +114,7 @@ body {
 ========================================= */
 
 body.home-page {
-    overflow: hidden;
+    overflow-y: auto;
 }
 
 .home {
@@ -302,6 +305,7 @@ body.home-page {
     font-size: 42px;
 
     margin-top: 10px;
+    margin-bottom: 15px;
 }
 
 .hero-description {
@@ -345,6 +349,8 @@ body.home-page {
 
     position: relative;
     z-index: 5;
+    
+    cursor: pointer;
 }
 
 .primary-btn,
@@ -420,6 +426,8 @@ body.home-page {
     backdrop-filter: blur(12px);
 
     transition: 0.3s;
+    
+    cursor: pointer;
 }
 
 .project-card:hover {
@@ -447,13 +455,16 @@ body.home-page {
 
     justify-content: flex-start;
 
-    padding: 40px 20px;
+    padding: 80px 20px;
 }
 
+.skills-section {
+    background: rgba(15, 23, 42, 0.3);
+}
 
-/* =========================================
-   CONTACT PAGE
-========================================= */
+.projects-section {
+    background: rgba(121, 59, 122, 0.2);
+}
 
 .contact-page {
     min-height: calc(100vh - 80px);
@@ -463,6 +474,8 @@ body.home-page {
 
     justify-content: center;
     align-items: center;
+    
+    background: rgba(15, 23, 42, 0.5);
 }
 
 
@@ -585,6 +598,8 @@ body.home-page {
     font-weight: bold;
 
     transition: 0.3s;
+    
+    cursor: pointer;
 }
 
 .back-btn:hover {
@@ -691,6 +706,11 @@ body.home-page {
         opacity: 0.12;
     }
 
+    /* PAGE PADDING */
+    .page {
+        padding: 60px 15px;
+    }
+
     /* DETAIL CARD */
     .detail-card {
         padding: 20px 20px;
@@ -716,20 +736,6 @@ body.home-page {
     .back-btn {
         padding: 10px 24px;
         font-size: 14px;
-    }
-
-    /* PAGE PADDING */
-    .page {
-        padding: 30px 15px;
-    }
-
-    body.home-page {
-        overflow-y: auto;
-    }
-
-    .home {
-        height: auto;
-        min-height: calc(100vh - 70px);
     }
 }
 
@@ -841,6 +847,15 @@ body.home-page {
     .i5 { top: 50%; left: 3%; }
     .i6 { top: 55%; right: 3%; }
 
+    /* PAGE PADDING */
+    .page {
+        padding: 50px 12px;
+    }
+
+    .main-heading {
+        margin-bottom: 15px;
+    }
+
     /* DETAIL CARD */
     .detail-card {
         padding: 15px 15px;
@@ -882,31 +897,6 @@ body.home-page {
         padding: 9px 20px;
         font-size: 12px;
         margin-top: 12px;
-    }
-
-    /* PAGE PADDING */
-    .page {
-        padding: 20px 12px;
-    }
-
-    .main-heading {
-        margin-bottom: 15px;
-    }
-
-    /* HOME PAGE */
-    body.home-page {
-        overflow-y: auto;
-    }
-
-    .home {
-        height: auto;
-        min-height: calc(100vh - 60px);
-        padding: 10px;
-    }
-
-    .contact-page {
-        justify-content: flex-start;
-        padding-top: 30px;
     }
 }
 
