@@ -311,7 +311,7 @@ body.home-page {
 
 
 /* =========================================
-   8. NEW BACK TO TOP OPTION BUTTON (STANDALONE)
+   8. BACK TO TOP OPTION BUTTON (STANDALONE)
 ========================================= */
 
 .back-to-top-container {
@@ -347,31 +347,19 @@ body.home-page {
 
 
 /* =========================================
-   9. ROW CENTERING SPECIFICATIONS
+   9. ROW CENTERING MEDIA ADAPTATIONS
 ========================================= */
 
-/* Desktop view (3-columns layout) */
+/* Desktop view (Sets precise balanced 3-column structures) */
 @media (min-width: 992px) {
-    /* Centers last remaining project beautifully */
-    .projects-section .grid .project-wrapper:last-child {
-        grid-column: 1 / -1; 
-        justify-self: center;
-        max-width: 330px;
-    }
-    /* Centers the 3rd contact option if it floats uniquely */
     .contact-grid {
-        grid-template-columns: repeat(3, 1fr) !important;
+        grid-template-columns: repeat(3, 1fr) !important; /* Perfect fit for 3 contact boxes */
     }
 }
 
-/* Tablet view & Mid Screens */
+/* Tablet view & Mid-Size Screens (Perfect grids layout) */
 @media (max-width: 991px) and (min-width: 651px) {
-    .projects-section .grid .project-wrapper:last-child {
-        grid-column: span 2;
-        justify-self: center;
-        max-width: 320px;
-    }
-    /* Centers the 3rd standalone item on row 2 */
+    /* Since contacts are exactly 3, centers the last one on row 2 */
     .contact-page .grid .contact-wrapper:last-child {
         grid-column: span 2;
         justify-self: center;
@@ -379,7 +367,7 @@ body.home-page {
     }
 }
 
-/* Mobile responsive alterations */
+/* Mobile responsive alignment alterations */
 @media (max-width: 650px) {
     .contact-page .grid {
         grid-template-columns: 1fr !important;
@@ -400,15 +388,11 @@ body.home-page {
         padding: 35px 20px !important;
         font-size: 18px;
     }
-
-    .projects-section .grid .project-wrapper:last-child {
-        grid-column: auto !important;
-    }
 }
 
 
 /* =========================================
-   10. DETAIL SHEET MANAGEMENT
+   10. DETAILS CARD SHEET PAGES
 ========================================= */
 
 .project-detail-page {
@@ -497,7 +481,7 @@ body.home-page {
 
 
 /* =========================================
-   11. MEDIA INVERSION RULES
+   11. UNIVERSAL MEDIA INVERSION DEGRADATIONS
 ========================================= */
 
 @media (max-width: 768px) {

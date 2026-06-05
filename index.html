@@ -10,7 +10,6 @@
 
 <body class="home-page">
 
-    <!-- BACKGROUND ICONS -->
     <div class="bg-icons">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="icon i1">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" class="icon i2">
@@ -20,7 +19,6 @@
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="icon i6">
     </div>
 
-    <!-- NAVBAR -->
     <nav class="navbar">
         <div class="logo">Atika Khalid</div>
         <ul>
@@ -31,7 +29,6 @@
         </ul>
     </nav>
 
-    <!-- HERO SECTION -->
     <section id="hero" class="home">
         <div class="image-container">
             <div class="side-name left-name">ATIKA</div>
@@ -39,26 +36,22 @@
             <div class="side-name right-name">KHALID</div>
         </div>
 
-        <!-- ROLE -->
         <div class="overlay-role">
             <span id="role-text"></span>
         </div>
 
-        <!-- TEXT -->
         <h1 class="main-heading">Computer Science Student</h1>
         <p class="hero-description">
             Passionate about Frontend Development, Data Analytics,
             Python Programming, and building modern digital experiences.
         </p>
 
-        <!-- BUTTONS -->
         <div class="hero-buttons">
             <a href="#projects" class="btn primary-btn">View Projects</a>
             <a href="#contact" class="btn secondary-btn">Contact Me</a>
         </div>
     </section>
 
-    <!-- SKILLS SECTION (Isolated Into Individual Containment Blocks) -->
     <section id="skills" class="page skills-section">
         <h1 class="main-heading">My Skills</h1>
         <div class="grid">
@@ -77,7 +70,6 @@
         </div>
     </section>
 
-    <!-- PROJECTS SECTION (Isolated Into Distinct Box Elements) -->
     <section id="projects" class="page projects-section">
         <h1 class="main-heading">My Projects</h1>
         <div class="grid">
@@ -85,7 +77,7 @@
                 <a href="netflix.html" class="project-card">🎬 Netflix Clone</a>
             </div>
             <div class="project-wrapper">
-                <a href="fyp.html" class="project-card">🤖 AI-PC Builder (FYP)</a>
+                <a href="fyp.html" class="project-card">🤖 AI WhatsApp Chatbot (FYP)</a>
             </div>
             <div class="project-wrapper">
                 <a href="database.html" class="project-card">📊 Data Analytics Project</a>
@@ -99,60 +91,36 @@
             <div class="project-wrapper">
                 <a href="dashboard.html" class="project-card">📊 UI Dashboard (Frontend Project)</a>
             </div>
-        
         </div>
     </section>
 
-    <!-- CONTACT SECTION (Isolated Into Distinct Functional Layout Boxes) -->
     <section id="contact" class="page contact-page">
-
         <h1 class="main-heading">Get In Touch</h1>
-
         <p class="hero-description">
             Feel free to contact me for collaborations, projects or opportunities.
         </p>
 
         <div class="grid contact-grid">
-
             <div class="contact-wrapper">
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=atikakhalid441@gmail.com" target="_blank" class="project-card">
-                    📧 Email Me
-                </a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=atikakhalid441@gmail.com" target="_blank" class="project-card">📧 Email Me</a>
             </div>
-
             <div class="contact-wrapper">
-                <a href="https://www.linkedin.com/in/atika-khalid-a58594318" target="_blank" class="project-card">
-                    💼 LinkedIn
-                </a>
+                <a href="https://www.linkedin.com/in/atika-khalid-a58594318" target="_blank" class="project-card">💼 LinkedIn</a>
             </div>
-
             <div class="contact-wrapper">
-                <a href="https://github.com/Atika1888" target="_blank" class="project-card">
-                    💻 GitHub
-                </a>
+                <a href="https://github.com/Atika1888" target="_blank" class="project-card">💻 GitHub</a>
             </div>
-
         </div>
 
         <div class="back-to-top-container">
             <a href="#hero" class="back-to-top-btn">⬆ Back to Top</a>
         </div>
-
     </section>
 
-    <!-- TYPING EFFECT & NAVIGATION SCRIPT -->
     <script>
         // Typing Effect
-        const roles = [
-            "Frontend Developer",
-            "Data Analyst",
-            "Problem Solver",
-            "AI Enthusiast"
-        ];
-
-        let i = 0;
-        let j = 0;
-        let isDeleting = false;
+        const roles = ["Frontend Developer", "Data Analyst", "Problem Solver", "AI Enthusiast"];
+        let i = 0, j = 0, isDeleting = false;
 
         function typeEffect() {
             let current = roles[i];
@@ -174,7 +142,6 @@
 
             setTimeout(typeEffect, isDeleting ? 70 : 120);
         }
-
         typeEffect();
 
         // Smooth Scroll for all anchor links
@@ -197,11 +164,8 @@
 
         window.addEventListener('scroll', () => {
             let current = '';
-            
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                
                 if (pageYOffset >= sectionTop - 200) {
                     current = section.getAttribute('id');
                 }
@@ -215,6 +179,5 @@
             });
         });
     </script>
-
 </body>
 </html>
