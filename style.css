@@ -347,19 +347,19 @@ body.home-page {
 
 
 /* =========================================
-   9. ROW CENTERING MEDIA ADAPTATIONS
+   9. GRID STRUCTURE FOR PRECISE ROWS
 ========================================= */
 
-/* Desktop view (Sets precise balanced 3-column structures) */
+/* Desktop view (Sets precise balanced grids) */
 @media (min-width: 992px) {
     .contact-grid {
-        grid-template-columns: repeat(3, 1fr) !important; /* Perfect fit for 3 contact boxes */
+        grid-template-columns: repeat(3, 1fr) !important; /* Holds 3 contact items in a row */
     }
 }
 
-/* Tablet view & Mid-Size Screens (Perfect grids layout) */
+/* Tablet view & Mid-Size Screens */
 @media (max-width: 991px) and (min-width: 651px) {
-    /* Since contacts are exactly 3, centers the last one on row 2 */
+    /* Since contact options are exactly 3, centers the last one on row 2 */
     .contact-page .grid .contact-wrapper:last-child {
         grid-column: span 2;
         justify-self: center;
@@ -367,7 +367,7 @@ body.home-page {
     }
 }
 
-/* Mobile responsive alignment alterations */
+/* Mobile responsive layout structures */
 @media (max-width: 650px) {
     .contact-page .grid {
         grid-template-columns: 1fr !important;
@@ -392,7 +392,7 @@ body.home-page {
 
 
 /* =========================================
-   10. DETAILS CARD SHEET PAGES
+   10. DETAILS SHEET SHEET PAGES
 ========================================= */
 
 .project-detail-page {
@@ -481,7 +481,7 @@ body.home-page {
 
 
 /* =========================================
-   11. UNIVERSAL MEDIA INVERSION DEGRADATIONS
+   11. MEDIA BREAKPOINT ASSIGNMENTS
 ========================================= */
 
 @media (max-width: 768px) {
